@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: studeda
+    runtime: python
+    plan: free
+    buildCommand: echo "No build required"
+    startCommand: python app.py
