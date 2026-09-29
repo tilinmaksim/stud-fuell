@@ -1,0 +1,37 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Student Fuel — Рацион</title><link rel="stylesheet" href="/style.css"></head><body>
+<div class="shell"><header class="topbar"><div class="brand"><div class="logo">⚡</div><div><b>Student <span>Fuel</span></b><div class="page-title">Рацион и история</div></div></div><div class="top-actions"><button class="plan-toggle" type="button">FREE</button><div class="avatar">🥑</div></div></header>
+<section class="hero"><div class="hero-content"><div class="kicker">Твой рацион • твоя энергия</div><h1>Питайся проще.<br>Учись сильнее.</h1><p>Сохраняй КБЖУ, следи за рационом и держи питание под контролем.</p><div class="hero-tag">🔥 student mode on</div></div></section>
+<main class="content"><div class="datebar"><input type="date" id="mealDate"><button class="icon-btn" id="todayBtn" title="Сегодня">↻</button></div>
+<div class="stats"><div class="stat kcal"><small>Калории</small><div class="value" id="sumKcal">0</div><small id="capCalories">ккал за день</small><div class="premium-only stat-progress"><span id="progCalories"></span></div></div><div class="stat protein"><small>Белки</small><div class="value" id="sumP">0 г</div><small id="capProtein">в рационе</small><div class="premium-only stat-progress"><span id="progProtein"></span></div></div><div class="stat fat"><small>Жиры</small><div class="value" id="sumF">0 г</div><small id="capFat">в рационе</small><div class="premium-only stat-progress"><span id="progFat"></span></div></div><div class="stat carbs"><small>Углеводы</small><div class="value" id="sumC">0 г</div><small id="capCarbs">в рационе</small><div class="premium-only stat-progress"><span id="progCarbs"></span></div></div></div>
+
+<div class="free-only premium-teaser">
+  <div class="premium-head"><div class="crown">👑</div><div><h3>Student Fuel Premium</h3><div class="premium-sub">Дополнительная аналитика без ограничения обычных функций</div></div></div>
+  <p>В Premium можно задать свои дневные цели КБЖУ и посмотреть, как менялось питание за последнюю неделю.</p>
+  <div class="premium-benefits"><span>🎯 Свои цели</span><span>📊 7 дней аналитики</span><span>✨ Умный подбор блюд</span></div>
+</div>
+
+<section class="premium-only premium-panel">
+  <div class="premium-head"><div class="crown">🎯</div><div><h3>Мои дневные цели</h3><div class="premium-sub">Настрой ориентиры под свой режим</div></div></div>
+  <div class="goal-grid">
+    <div class="goal-field"><label>Калории, ккал</label><input id="goalCalories" type="number" min="1"></div>
+    <div class="goal-field"><label>Белки, г</label><input id="goalProtein" type="number" min="1"></div>
+    <div class="goal-field"><label>Жиры, г</label><input id="goalFat" type="number" min="1"></div>
+    <div class="goal-field"><label>Углеводы, г</label><input id="goalCarbs" type="number" min="1"></div>
+  </div>
+  <button class="secondary mini-save" id="saveGoals">Сохранить цели</button>
+</section>
+
+<section class="premium-only premium-panel">
+  <div class="premium-head"><div class="crown">📊</div><div><h3>Аналитика за 7 дней</h3><div class="premium-sub">Небольшой обзор без сложных графиков</div></div></div>
+  <div class="week-summary">
+    <div class="week-metric"><b id="weekAvgKcal">0</b><small>ср. ккал</small></div>
+    <div class="week-metric"><b id="weekAvgProtein">0 г</b><small>ср. белок</small></div>
+    <div class="week-metric"><b id="weekTracked">0/7</b><small>дней с записями</small></div>
+  </div>
+  <div class="week-chart" id="weekChart"></div>
+</section>
+
+<section class="section card"><div class="card-title"><div class="badge">🍴</div><h3>Добавить приём пищи</h3></div><div class="grid">
+<div class="field full"><label>Продукт или блюдо</label><input id="product" placeholder="Например: курица с гречкой"></div><div class="field"><label>Ккал</label><input id="kcal" type="number" min="0" placeholder="0"></div><div class="field"><label>Белки, г</label><input id="protein" type="number" step="0.1" min="0" placeholder="0"></div><div class="field"><label>Жиры, г</label><input id="fat" type="number" step="0.1" min="0" placeholder="0"></div><div class="field"><label>Углеводы, г</label><input id="carbs" type="number" step="0.1" min="0" placeholder="0"></div><div class="field full"><label>Время приёма пищи</label><input id="mealTime" type="time"></div></div><button class="primary" id="addMeal">＋ Добавить в рацион</button></section>
+<section class="section"><div class="section-title"><h2>История за день</h2><span id="countMeals">0 приёмов</span></div><div class="meal-list" id="mealList"></div></section></main>
+<nav class="bottom-nav"><a class="nav-item active" href="/ration"><div class="nav-icon">🍴</div>Рацион</a><a class="nav-item" href="/reminders"><div class="nav-icon">🔔</div>Напоминания</a><a class="nav-item" href="/catalog"><div class="nav-icon">📚</div>База</a></nav></div><div class="toast" id="toast"></div><script src="/common.js"></script><script src="/ration.js"></script></body></html>

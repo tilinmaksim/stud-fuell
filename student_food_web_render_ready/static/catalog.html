@@ -1,0 +1,22 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Student Fuel — База продуктов</title><link rel="stylesheet" href="/style.css"></head><body>
+<div class="shell"><header class="topbar"><div class="brand"><div class="logo">🥦</div><div><b>Student <span>Fuel</span></b><div class="page-title">База продуктов</div></div></div><div class="top-actions"><button class="plan-toggle" type="button">FREE</button><div class="avatar">💪</div></div></header>
+<section class="hero compact"><div class="hero-content"><div class="kicker">Бюджетно • полезно</div><h1>Простая еда.<br>Большие цели.</h1><p>Недорогие продукты и быстрые рецепты для студента.</p><div class="hero-tag">🥗 smart food</div></div></section>
+<main class="content"><div class="search"><input id="search" placeholder="Поиск продуктов и рецептов"></div><div class="filters"><button class="filter active" data-kind="Все">Все</button><button class="filter" data-kind="Продукт">Продукты</button><button class="filter" data-kind="Рецепт">Рецепты</button></div>
+
+<div class="free-only premium-teaser">
+  <div class="premium-head"><div class="crown">👑</div><div><h3>Умный подбор — Premium</h3><div class="premium-sub">Не скрывает обычный каталог</div></div></div>
+  <p>Premium может предложить несколько рецептов с учётом того, сколько калорий и белка уже набрано сегодня.</p>
+</div>
+
+<section class="premium-only smart-box">
+  <div class="premium-head"><div class="crown">✨</div><div><h3>Что съесть сейчас?</h3><div class="premium-sub">Подбор по оставшимся целям на сегодня</div></div></div>
+  <p id="smartText">Нажми кнопку, и приложение выберет несколько подходящих рецептов из базы.</p>
+  <button class="primary" id="smartPick">Подобрать блюда</button>
+  <div class="smart-results" id="smartResults"></div>
+  <div class="plan-note">Это ориентир для удобства, а не медицинская рекомендация.</div>
+</section>
+
+<section class="section"><div class="section-title"><h2>База студента</h2><span id="catalogCount">0 позиций</span></div><div class="catalog-grid" id="catalogGrid"></div></section></main>
+<nav class="bottom-nav"><a class="nav-item" href="/ration"><div class="nav-icon">🍴</div>Рацион</a><a class="nav-item" href="/reminders"><div class="nav-icon">🔔</div>Напоминания</a><a class="nav-item active" href="/catalog"><div class="nav-icon">📚</div>База</a></nav></div>
+<div class="detail" id="detail"><div class="sheet"><div class="sheet-head"><div><div class="kicker" id="dKind"></div><h2 id="dName"></h2></div><button class="close" id="closeDetail">✕</button></div><div class="big-art" id="dIcon"></div><div class="row between"><span id="dPrice"></span><span id="dTime"></span></div><div class="macroline"><div class="macrochip"><small>Ккал</small><b id="dK"></b></div><div class="macrochip"><small>Белки</small><b id="dP"></b></div><div class="macrochip"><small>Жиры</small><b id="dF"></b></div><div class="macrochip"><small>Углев.</small><b id="dC"></b></div></div><div class="pre" id="dDesc"></div><button class="primary" id="addFromCatalog">＋ Добавить в рацион</button></div></div>
+<div class="toast" id="toast"></div><script src="/common.js"></script><script src="/catalog.js"></script></body></html>
